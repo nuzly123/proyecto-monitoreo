@@ -20,9 +20,9 @@ class UserController
                     $respuesta['contrasena'] == $_POST['passwordLogin']
                 ) {
                     $_SESSION['login']="OK";
-                    echo '<script>window.location = "inicio.php"</script>';
+                    echo '<script>window.location = "dashboard"</script>';
                 }else {
-
+                    echo ("<div class='alert alert-danger'> Error al Ingresar al Sistema</div>");
                 }
             //}
         }

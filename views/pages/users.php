@@ -30,7 +30,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Usuario</th>
+                            <th scope="col">Usuario</th>
                             <th>Creado</th>
                             <th>Modificado</th>
                             <th>Creado por</th>
@@ -40,7 +40,13 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-
+                        <td>Esto es</td>
+                        <td>Esto es</td>
+                        <td>Esto es</td>
+                        <td>Esto es</td>
+                        <td>Esto es</td>
+                        <td>Esto es</td>
+                        <td>Esto es</td>
                     </tbody>
                 </table>
             </div>

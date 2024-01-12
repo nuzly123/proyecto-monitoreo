@@ -1,5 +1,6 @@
 <?php
 require_once "database.php";
+
 class UserModel
 {
     static public function mdlShowUsers($table, $item, $value)
@@ -8,7 +9,7 @@ class UserModel
         $stmt->bindParam(":" . $item, $value, PDO::PARAM_STR);
         $stmt->execute();
         return $stmt->fetch();
-        $stmt->close();
+        //$stmt->close();
         $stmt = null;
     }
 }
