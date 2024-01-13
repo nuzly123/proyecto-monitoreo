@@ -30,7 +30,9 @@ session_start();
     <!-- summernote -->
     <link rel="stylesheet" href="views/plugins/summernote/summernote-bs4.min.css">
 
-
+    <!-- CSS PARA DATATABLES -->
+    <link rel="stylesheet" href="views/plugins/datatables/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="views/plugins/datatables-responsive/css/responsive.bootstrap4.css" />
 
 </head>
 
@@ -45,11 +47,11 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
 ?>
     <!-- NAVBAR / HEADER -->
     <?php
-    include "views/pages/header.php";
+    include "views/pages/modules/header.php";
     ?>
     <!-- MENU -->
     <?php
-    include "views/pages/menu.php";
+    include "views/pages/modules/menu.php";
     ?>
 
     <div class="content-wrapper">
@@ -59,11 +61,12 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
 
             /* PAGINAS PRINCIPALES */
             if (
-                $_GET['ruta'] == 'users'||
+                $_GET['ruta'] == 'users' ||
                 $_GET['ruta'] == 'empleados' ||
                 $_GET['ruta'] == 'tripulacion' ||
                 $_GET['ruta'] == 'aeronaves' ||
-                $_GET['ruta'] == 'monitoreo'  
+                $_GET['ruta'] == 'empleados' ||
+                $_GET['ruta'] == 'monitoreo'
             ) {
                 include "views/pages/" . $_GET["ruta"] . ".php";
 
@@ -74,10 +77,11 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
                 $_GET['ruta'] == 'departamentos' ||
                 $_GET['ruta'] == 'estaciones'
             ) {
-                include "views/pages/" . $_GET["ruta"] . ".php";
+                include "views/pages/config/" . $_GET["ruta"] . ".php";
 
                 /* MAS OPCIONES */
             } else if (
+                $_GET['ruta'] == 'perfil' ||
                 $_GET['ruta'] == 'dashboard' ||
                 $_GET['ruta'] == 'signout'
             ) {
@@ -93,13 +97,12 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
 
     <!-- FOOTER -->
     <?php
-    include "views/pages/footer.php";
+    include "views/pages/modules/footer.php";
     ?>
 <?php
 } else {
     echo '<body class="hold-transition sidebar-mini login-page">';
-    include "views/pages/login.php";
-    
+    include "views/pages/modules/login.php";
 }
 ?>
 
@@ -118,11 +121,11 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
 <script src="views/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="views/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="views/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
+<!-- Sparkline 
+<script src="views/plugins/sparklines/sparkline.js"></script>-->
+<!-- JQVMap
 <script src="views/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="views/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="views/plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
 <!-- jQuery Knob Chart -->
 <script src="views/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -140,6 +143,11 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "OK") {
 <script src="views/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="views/dist/js/pages/dashboard.js"></script>
+
+<!-- SCRIPT PARA DATATABLES -->
+<script src="views/plugins/datatables/jquery.dataTables.js"></script>
+<script src="views/plugins/datatables-responsive/js/dataTables.responsive.js"></script>
+<script src="views/js/template.js"></script>
 
 </body>
 

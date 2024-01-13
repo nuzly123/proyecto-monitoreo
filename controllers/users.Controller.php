@@ -10,9 +10,9 @@ class UserController
                 preg_match('/^[a-zA-Z0-9]+$', $_POST['passwordLogin'])
             ) { */
                 $tabla = "usuarios";
-                $intem = "usuario";
+                $item = "usuario";
                 $valor = $_POST['userLogin'];
-                $respuesta = UserModel::mdlShowUsers($tabla, $intem, $valor);
+                $respuesta = UserModel::mdlShowUsers($tabla, $item, $valor);
 
                 /* AUTENTICACION */
                 if (

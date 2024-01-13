@@ -51,7 +51,15 @@
                      </a>
                  </li>
                  <li class="nav-item">
-                     <a href="usuarios" class="nav-link">
+                     <a href="empleados" class="nav-link">
+                     <i class="nav-icon fas fa-briefcase"></i>
+                         <p>
+                             Empleados
+                         </p>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="tripulacion" class="nav-link">
                          <i class="nav-icon fas fa-users"></i>
                          <p>
                              Tripulación
@@ -69,7 +77,7 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="" class="nav-link">
+                             <a href="aeropuertos" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Aeropuertos</p>
                              </a>
@@ -96,7 +104,7 @@
                  </li>
                  <li class="nav-header">MÁS OPCIONES</li>
                  <li class="nav-item">
-                     <a href="monitoreo" class="nav-link">
+                     <a href="perfil" class="nav-link">
                          <i class="nav-icon fas fa-user-circle"></i>
                          <p>
                              Perfil
