@@ -33,6 +33,7 @@ session_start();
     <!-- CSS PARA DATATABLES -->
     <link rel="stylesheet" href="views/plugins/datatables/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="views/plugins/datatables-responsive/css/responsive.bootstrap4.css" />
+    <link rel="stylesheet" href="views/css/css_new.css"/>
 
 </head>
 

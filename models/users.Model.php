@@ -3,13 +3,12 @@ require_once "database.php";
 
 class UserModel
 {
-    static public function mdlShowUsers($table, $item, $value)
-    {
-        $stmt = Database::connect()->prepare("SELECT * FROM $table WHERE $item = :$item");
-        $stmt->bindParam(":" . $item, $value, PDO::PARAM_STR);
+    //funciones propias de usuarios edit, update
+    static public function mdlUpdateLastLogIn($id, $table){
+        $date = date("Y-m-d H:i:s");
+        $stmt = Database::connect()->prepare("UPDATE $table SET last_login = '{$date}' WHERE id = $id");
         $stmt->execute();
-        return $stmt->fetch();
-        //$stmt->close();
         $stmt = null;
     }
-}
+} 
+?>

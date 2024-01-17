@@ -39,7 +39,7 @@
                             <th class="text-center">Acciones</th>
                         </tr>
                     </thead>
-                </table>
+                </table>                
             </div>
         </div>
     </div>

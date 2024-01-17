@@ -31,7 +31,7 @@
                         <!-- /.col -->
                     </div>
                     <?php
-                    $login = new UserController();
+                    $login = new UserController(); 
                     $login->ctrLogin();
                     ?>
                 </form>
